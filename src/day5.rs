@@ -1,4 +1,4 @@
-use anyhow::{Context, Result};
+use anyhow::Result;
 use aoc_runner_derive::aoc;
 
 use std::{collections::{HashMap, HashSet}, mem};

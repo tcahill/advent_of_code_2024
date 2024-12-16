@@ -145,7 +145,7 @@ fn count_cycles(grid: &mut Grid) -> u64 {
 }
 
 #[aoc(day6, part1)]
-pub fn run(input: &str) -> u64 {
+pub fn part1(input: &str) -> u64 {
     let mut grid: Grid = input.try_into().unwrap();
     count_positions(&mut grid)
 }

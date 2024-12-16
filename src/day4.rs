@@ -1,6 +1,5 @@
 use anyhow::Result;
 use aoc_runner_derive::aoc;
-use regex::Regex;
 
 const DIRECTIONS: &[(i64, i64)] = &[
     (-1, -1),
@@ -19,7 +18,7 @@ const DIAGONALS: &[&[(i64, i64)]] = &[
 ];
 
 #[aoc(day4, part1)]
-fn part1(input: &str) -> u64 {
+pub fn part1(input: &str) -> u64 {
     let grid: Vec<_> = input.lines().map(|line| line.as_bytes()).collect();
     let mut count = 0;
 
@@ -52,7 +51,7 @@ fn search(point: (usize, usize), direction: &(i64, i64), grid: &[&[u8]]) -> bool
 }
 
 #[aoc(day4, part2)]
-fn part2(input: &str) -> u64 {
+pub fn part2(input: &str) -> u64 {
     let grid: Vec<_> = input.lines().map(|line| line.as_bytes()).collect();
     let mut count = 0;
 

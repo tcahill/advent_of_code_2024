@@ -1,4 +1,4 @@
-use std::collections::{HashSet, VecDeque};
+use std::collections::VecDeque;
 
 use anyhow::Result;
 use aoc_runner_derive::aoc;

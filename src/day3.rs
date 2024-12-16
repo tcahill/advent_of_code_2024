@@ -3,7 +3,7 @@ use aoc_runner_derive::aoc;
 use regex::Regex;
 
 #[aoc(day3, part1)]
-fn part1(input: &str) -> u64 {
+pub fn part1(input: &str) -> u64 {
     let re = Regex::new(r"mul\(([0-9]+),([0-9]+)\)").unwrap();
     re.captures_iter(input).map(|capture| {
         capture[1].parse::<u64>().unwrap_or(0) * capture[2].parse::<u64>().unwrap_or(0)
@@ -11,7 +11,7 @@ fn part1(input: &str) -> u64 {
 }
 
 #[aoc(day3, part2)]
-fn part2(input: &str) -> u64 {
+pub fn part2(input: &str) -> u64 {
     let re = Regex::new(r"mul\(([0-9]+),([0-9]+)\)|do\(\)|don't\(\)").unwrap();
     let mut enabled = true;
     let mut sum = 0;
