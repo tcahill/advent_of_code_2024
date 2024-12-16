@@ -19,7 +19,7 @@ fn similarity(list1: &[u64], list2: &[u64]) -> u64 {
     }).sum()
 }
 
-fn parse_input(input: &str) -> Result<(Vec<u64>, Vec<u64>)>{
+fn parse_input(input: &str) -> Result<(Vec<u64>, Vec<u64>)> {
     input.split_ascii_whitespace()
         .map(|elem| elem.parse::<u64>().context("parse error"))
         .tuples::<(_, _)>()
