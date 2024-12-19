@@ -17,6 +17,9 @@ pub mod day13;
 pub mod day14;
 pub mod day15;
 pub mod day16;
+pub mod day17;
+pub mod day18;
+pub mod day19;
 
 aoc_lib! { year = 2024 }
 
@@ -37,4 +40,7 @@ pub const RUN_FUNCS: &[[fn(&str)->u64; 2]] = &[
     [day14::part1, day14::part2],
     [day15::part1, day15::part2],
     [day16::part1, day16::part2],
+    [day17::part1, day17::part2],
+    [day18::part1, day18::part2],
+    [day19::part1, day19::part2],
 ];
