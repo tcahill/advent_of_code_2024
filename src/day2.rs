@@ -4,9 +4,9 @@ use itertools::Itertools;
 
 fn is_safe<'a, I>(report: I) -> bool
 where
-    I: IntoIterator<Item = u64>
+    I: Iterator<Item = u64>
 {
-    let mut iter = report.into_iter().tuple_windows();
+    let mut iter = report.tuple_windows();
 
     let mut direction: Option<i64> = None;
     iter.all(|(i, j)| {
